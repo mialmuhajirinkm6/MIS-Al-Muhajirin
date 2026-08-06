@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- BERANDA -->
+    <url>
+        <loc>https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/</loc>
+    </url>
+
+    <!-- PROFIL -->
+    <url>
+        <loc>https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/profil.html</loc>
+    </url>
+
+    <!-- AKADEMIK -->
+    <url>
+        <loc>https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/akademik.html</loc>
+    </url>
+
+    <!-- KESISWAAN -->
+    <url>
+        <loc>https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/kesiswaan.html</loc>
+    </url>
+
+    <!-- PROGRAM -->
+    <url>
+        <loc>https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/program.html</loc>
+    </url>
+
+    <!-- BERITA & GALERI -->
+    <url>
+        <loc>https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/galeri.html</loc>
+    </url>
+
+    <!-- KONTAK -->
+    <url>
+        <loc>https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/kontak.html</loc>
+    </url>
+
+    <!-- PPDB -->
+    <url>
+        <loc>https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/ppdb.html</loc>
+    </url>
+
+    <!-- BERITA 01 -->
+    <url>
+        <loc>https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/berita/isiberita1.html</loc>
+    </url>
+
+</urlset>
