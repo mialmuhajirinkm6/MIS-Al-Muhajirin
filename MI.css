@@ -246,7 +246,7 @@ button {
             rgba(3, 70, 50, 0.90) 42%,
             rgba(3, 70, 50, 0.38) 100%
         ),
-        url("../aset/fotobersama1.jpeg");
+        url("aset/fotobersama1.jpeg");
     background-size: cover;
     background-position: center;
 }
