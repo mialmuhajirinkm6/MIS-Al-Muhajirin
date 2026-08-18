@@ -246,7 +246,7 @@ button {
             rgba(3, 70, 50, 0.90) 42%,
             rgba(3, 70, 50, 0.38) 100%
         ),
-        url("aset/fotobersama1.jpeg");
+        url("../Website\ MI\ Al-Mihajirin/aset/fotobersama1.jpeg");
     background-size: cover;
     background-position: center;
 }
@@ -1031,6 +1031,30 @@ button {
     color: rgba(255, 255, 255, 0.50);
 }
 
+/* =====================================================
+   FOOTER COPYRIGHT LINK
+===================================================== */
+
+.footer-brand-link {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        color .2s ease,
+        opacity .2s ease;
+}
+
+.footer-brand-link:hover {
+    color: orange;
+
+    opacity: .85;
+}
+
+.footer-brand-link:active {
+    opacity: .7;
+}
+
 @media (max-width: 1100px) {
     .nav-menu {
         gap: 17px;
@@ -1052,7 +1076,7 @@ button {
 
 @media (max-width: 900px) {
     .section {
-        padding: 80px 0;
+        padding: 30px 0;
     }
     .topbar {
         display: none;
@@ -8532,3 +8556,4499 @@ body.lightbox-open {
     }
 }
 
+/*=========================================================
+    GURU
+=========================================================*/
+.teacher {
+    background-color: white;
+    margin-top: 0px;
+}
+.section-heading.center{
+    text-align:center;
+}
+
+.section-heading.center .section-label{
+
+    justify-content:center;
+
+    margin:0 auto 18px;
+
+}
+.teacher-stat{
+
+    display:grid;
+    grid-template-columns:320px 1fr;
+
+    gap:30px;
+
+    margin:50px 0 60px;
+
+}
+
+.teacher-stat-card{
+
+    padding:40px;
+
+    border-radius:20px;
+
+    background:linear-gradient(135deg,#0b6b46,#13865b);
+
+    color:#fff;
+
+    text-align:center;
+
+}
+
+.teacher-stat-card h2{
+
+    font-size:64px;
+
+    color:#f2cf7a;
+
+}
+
+.teacher-stat-card p{
+
+    margin-top:10px;
+
+    opacity:.9;
+
+}
+
+.teacher-info{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+
+}
+
+.teacher-info div{
+
+    background:#fff;
+
+    border:1px solid #e6ece8;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    padding:30px 20px;
+
+}
+
+.teacher-info strong{
+
+    display:block;
+
+    font-size:38px;
+
+    color:#0b6b46;
+
+}
+
+.teacher-info span{
+
+    display:block;
+
+    margin-top:8px;
+
+    color:#666;
+
+}
+
+.teacher-grid{
+
+    display:grid;
+    
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.teacher-card{
+
+    background:#fff;
+    
+    border:1px solid #e7ece8;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.teacher-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+}
+
+.teacher-card img{
+
+    width: 100%;
+    height: 300px;
+    
+    aspect-ratio:1/1;
+
+    object-fit:cover;
+
+    background:#eef2ef;
+
+}
+
+.teacher-card h3{
+
+    margin-top:20px;
+
+    padding:0 15px;
+
+    font-size:20px;
+
+    color:#154734;
+
+}
+
+.teacher-card span{
+
+    display:block;
+
+    margin:10px 0 25px;
+
+    color:#777;
+
+}
+
+@media(max-width:992px){
+
+.teacher-grid{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+.teacher-stat{
+
+grid-template-columns:1fr;
+
+}
+
+.teacher-info{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.teacher-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.teacher-info{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.teacher-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* =====================================================
+   DROPDOWN AKADEMIK
+===================================================== */
+
+.nav-item.dropdown {
+    position: relative;
+    text-decoration: none;
+}
+
+.nav-item.dropdown > .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.nav-item.dropdown > .nav-link i {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* MENU DROPDOWN */
+
+.nav-item.dropdown .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+
+    min-width: 230px;
+
+    padding: 10px;
+
+    margin: 0;
+
+    list-style: none;
+
+    background: #ffffff;
+
+    border: 1px solid #e7ece8;
+
+    border-radius: 14px;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.10);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease,
+        transform 0.25s ease;
+
+    z-index: 1000;
+}
+
+/* TAMPIL SAAT HOVER */
+
+.nav-item.dropdown:hover .dropdown-menu {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+/* PUTAR ICON */
+
+.nav-item.dropdown:hover > .nav-link i {
+
+    transform: rotate(180deg);
+
+}
+
+/* ITEM DROPDOWN */
+
+.nav-item.dropdown .dropdown-menu li {
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+/* LINK DROPDOWN */
+
+.nav-item.dropdown .dropdown-menu li a {
+
+    display: flex;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 12px 14px;
+
+    border-radius: 9px;
+
+    color: #234b3a;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        padding-left 0.2s ease;
+
+}
+
+/* HOVER ITEM */
+
+.nav-item.dropdown .dropdown-menu li a:hover {
+
+    background: #eef7f2;
+
+    color: #0b6b46;
+
+    padding-left: 18px;
+
+}
+
+.nav-menu,
+.nav-menu ul,
+.nav-menu li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* =====================================================
+   DROPDOWN MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .nav-item.dropdown {
+        width: 100%;
+    }
+
+    .nav-item.dropdown > .nav-link {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-item.dropdown .dropdown-menu {
+
+        position: static;
+
+        width: 100%;
+        min-width: 0;
+
+        margin-top: 6px;
+
+        padding: 6px;
+
+        border: none;
+
+        border-radius: 10px;
+
+        box-shadow: none;
+
+        background: #f5f9f7;
+
+        opacity: 1;
+        visibility: visible;
+
+        transform: none;
+
+        display: none;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: none;
+    }
+
+    .nav-item.dropdown.active .dropdown-menu {
+        display: block;
+    }
+
+    .nav-item.dropdown .dropdown-menu li a {
+
+        padding: 11px 15px;
+
+        font-size: 14px;
+
+    }
+
+}
+
+/* =====================================================
+   KALENDER AKADEMIK
+===================================================== */
+
+.academic-calendar {
+    background: #f8faf9;
+}
+
+.calendar-year-card {
+    max-width: 850px;
+    margin: 45px auto 70px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.calendar-year-icon {
+    width: 75px;
+    height: 75px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: #0b6b46;
+
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+.calendar-year-content span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+.calendar-year-content h2 {
+    margin: 0;
+
+    font-size: 32px;
+
+    color: #154734;
+}
+
+.calendar-year-content p {
+    margin: 8px 0 0;
+
+    color: #666;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
+
+.calendar-timeline {
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.calendar-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 115px;
+
+    top: 10px;
+
+    bottom: 10px;
+
+    width: 2px;
+
+    background: #dce8e1;
+}
+
+
+/* =====================================================
+   BULAN
+===================================================== */
+
+.calendar-month {
+    position: relative;
+
+    margin-bottom: 55px;
+}
+
+.calendar-month-title {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    padding-left: 150px;
+}
+
+.calendar-month-title span {
+    font-size: 25px;
+
+    font-weight: 700;
+
+    color: #154734;
+}
+
+.calendar-month-title small {
+    font-size: 15px;
+
+    color: #888;
+}
+
+
+/* =====================================================
+   EVENT
+===================================================== */
+
+.calendar-events {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.calendar-event {
+    display: grid;
+
+    grid-template-columns: 115px 1fr;
+
+    position: relative;
+}
+
+.calendar-date {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 65px;
+
+    min-height: 65px;
+
+    margin-left: 32px;
+
+    border-radius: 14px;
+
+    background: #ffffff;
+
+    border: 2px solid #0b6b46;
+
+    color: #0b6b46;
+
+    text-align: center;
+}
+
+.calendar-date strong {
+    font-size: 17px;
+
+    line-height: 1.1;
+}
+
+.calendar-date span {
+    margin-top: 3px;
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+
+    color: #777;
+}
+
+
+/* =====================================================
+   ISI EVENT
+===================================================== */
+
+.calendar-event-content {
+    padding: 18px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 16px;
+
+    transition: 0.3s ease;
+}
+
+.calendar-event-content:hover {
+    transform: translateX(5px);
+
+    border-color: #cbded4;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.calendar-event-content h3 {
+    margin: 0 0 7px;
+
+    font-size: 18px;
+
+    color: #154734;
+}
+
+.calendar-event-content p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+/* =====================================================
+   KALENDER RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .calendar-year-card {
+        margin-top: 35px;
+        margin-bottom: 50px;
+
+        padding: 22px;
+
+        gap: 18px;
+    }
+
+    .calendar-year-icon {
+        width: 60px;
+        height: 60px;
+
+        font-size: 24px;
+    }
+
+    .calendar-year-content h2 {
+        font-size: 26px;
+    }
+
+    .calendar-timeline::before {
+        left: 30px;
+    }
+
+    .calendar-month-title {
+        padding-left: 65px;
+    }
+
+    .calendar-month-title span {
+        font-size: 22px;
+    }
+
+    .calendar-event {
+        grid-template-columns: 60px 1fr;
+    }
+
+    .calendar-date {
+        width: 52px;
+        min-height: 52px;
+
+        margin-left: 4px;
+    }
+
+    .calendar-date strong {
+        font-size: 14px;
+    }
+
+    .calendar-date span {
+        font-size: 9px;
+    }
+
+    .calendar-event-content {
+        padding: 15px;
+    }
+
+    .calendar-event-content h3 {
+        font-size: 16px;
+    }
+
+    .calendar-event-content p {
+        font-size: 13px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .calendar-year-card {
+        align-items: flex-start;
+    }
+
+    .calendar-year-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 20px;
+
+        border-radius: 14px;
+    }
+
+    .calendar-year-content h2 {
+        font-size: 22px;
+    }
+
+    .calendar-year-content p {
+        font-size: 13px;
+    }
+
+}
+
+/* =====================================================
+   HALAMAN KURIKULUM
+===================================================== */
+
+.curriculum {
+    background: #f8faf9;
+}
+
+
+/* =====================================================
+   INTRO KURIKULUM
+===================================================== */
+
+.curriculum-intro {
+    max-width: 950px;
+    margin: 45px auto 60px;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.curriculum-intro-icon {
+    width: 78px;
+    height: 78px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #0b6b46;
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+.curriculum-intro-content span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+    color: #777;
+}
+
+.curriculum-intro-content h2 {
+    margin: 0;
+
+    font-size: 27px;
+    line-height: 1.35;
+
+    color: #154734;
+}
+
+.curriculum-intro-content p {
+    margin: 10px 0 0;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   KARTU PENDEKATAN
+===================================================== */
+
+.curriculum-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+
+    max-width: 1100px;
+
+    margin: 0 auto 75px;
+}
+
+.curriculum-card {
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 20px;
+
+    transition: 0.3s ease;
+}
+
+.curriculum-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+
+    border-color: #cbded4;
+}
+
+.curriculum-card-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background: #eef7f2;
+
+    color: #0b6b46;
+
+    font-size: 22px;
+}
+
+.curriculum-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 19px;
+
+    color: #154734;
+}
+
+.curriculum-card p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   MUATAN PEMBELAJARAN
+===================================================== */
+
+.curriculum-content {
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.curriculum-content-heading {
+    max-width: 700px;
+
+    margin-bottom: 35px;
+}
+
+.curriculum-content-heading h2 {
+    margin: 0 0 12px;
+
+    font-size: 30px;
+
+    color: #154734;
+}
+
+.curriculum-content-heading h2 span {
+    color: #0b6b46;
+}
+
+.curriculum-content-heading p {
+    margin: 0;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   DAFTAR MATA PELAJARAN
+===================================================== */
+
+.curriculum-subjects {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.subject-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 14px;
+
+    color: #154734;
+
+    transition: 0.25s ease;
+}
+
+.subject-item:hover {
+    transform: translateY(-3px);
+
+    background: #f1f8f4;
+
+    border-color: #cbded4;
+}
+
+.subject-item i {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #eef7f2;
+
+    color: #0b6b46;
+}
+
+.subject-item span {
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .curriculum-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .curriculum-subjects {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    .curriculum-intro {
+        margin-top: 35px;
+
+        padding: 24px;
+
+        gap: 18px;
+
+        align-items: flex-start;
+    }
+
+    .curriculum-intro-icon {
+        width: 62px;
+        height: 62px;
+
+        border-radius: 16px;
+
+        font-size: 24px;
+    }
+
+    .curriculum-intro-content h2 {
+        font-size: 22px;
+    }
+
+    .curriculum-grid {
+        grid-template-columns: 1fr;
+
+        margin-bottom: 55px;
+    }
+
+    .curriculum-card {
+        padding: 23px;
+    }
+
+    .curriculum-content-heading h2 {
+        font-size: 26px;
+    }
+
+    .curriculum-subjects {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .curriculum-intro {
+        padding: 20px;
+    }
+
+    .curriculum-intro-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 20px;
+    }
+
+    .curriculum-intro-content span {
+        font-size: 12px;
+    }
+
+    .curriculum-intro-content h2 {
+        font-size: 19px;
+    }
+
+    .curriculum-intro-content p {
+        font-size: 13px;
+    }
+
+}
+
+/* =====================================================
+   STRUKTUR KURIKULUM
+===================================================== */
+
+.curriculum-structure {
+    max-width: 1100px;
+    margin: 80px auto 0;
+}
+
+.curriculum-structure-heading {
+    max-width: 700px;
+    margin-bottom: 35px;
+}
+
+.curriculum-structure-heading h2 {
+    margin: 0 0 12px;
+
+    font-size: 30px;
+    line-height: 1.3;
+
+    color: #154734;
+}
+
+.curriculum-structure-heading h2 span {
+    color: #0b6b46;
+}
+
+.curriculum-structure-heading p {
+    margin: 0;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   GRID STRUKTUR
+===================================================== */
+
+.curriculum-structure-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   KARTU STRUKTUR
+===================================================== */
+
+.structure-card {
+    position: relative;
+
+    padding: 28px 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.structure-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #cbded4;
+
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =====================================================
+   NOMOR
+===================================================== */
+
+.structure-card-number {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    color: #b7c9bf;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.structure-card-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background: #eef7f2;
+
+    color: #0b6b46;
+
+    font-size: 21px;
+}
+
+.structure-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    color: #154734;
+}
+
+.structure-card p {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .curriculum-structure-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE HP
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .curriculum-structure {
+        margin-top: 60px;
+    }
+
+    .curriculum-structure-heading h2 {
+        font-size: 26px;
+    }
+
+    .curriculum-structure-grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+    .structure-card {
+        padding: 24px 20px;
+    }
+
+}
+
+/* =====================================================
+   HALAMAN KEGIATAN PEMBELAJARAN
+===================================================== */
+
+.learning-activities {
+    background: #f8faf9;
+}
+
+
+/* =====================================================
+   INTRO KEGIATAN
+===================================================== */
+
+.learning-intro {
+    max-width: 950px;
+    margin: 45px auto 65px;
+
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    padding: 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+    border-radius: 22px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+}
+
+.learning-intro-icon {
+    width: 78px;
+    height: 78px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 20px;
+
+    background: #0b6b46;
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+.learning-intro-content span {
+    display: block;
+
+    margin-bottom: 6px;
+
+    font-size: 14px;
+
+    color: #777;
+}
+
+.learning-intro-content h2 {
+    margin: 0;
+
+    font-size: 27px;
+    line-height: 1.35;
+
+    color: #154734;
+}
+
+.learning-intro-content p {
+    margin: 10px 0 0;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   HEADING RAGAM KEGIATAN
+===================================================== */
+
+.learning-activities-heading {
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+}
+
+.learning-activities-heading h2 {
+    margin: 0 0 12px;
+
+    font-size: 30px;
+    line-height: 1.3;
+
+    color: #154734;
+}
+
+.learning-activities-heading h2 span {
+    color: #0b6b46;
+}
+
+.learning-activities-heading p {
+    margin: 0;
+
+    color: #666;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   GRID KEGIATAN
+===================================================== */
+
+.learning-activities-grid {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+
+/* =====================================================
+   KARTU KEGIATAN
+===================================================== */
+
+.learning-card {
+    position: relative;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.learning-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #cbded4;
+
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.07);
+}
+
+.learning-card-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 20px;
+
+    border-radius: 15px;
+
+    background: #eef7f2;
+
+    color: #0b6b46;
+
+    font-size: 22px;
+}
+
+.learning-card h3 {
+    margin: 0 0 10px;
+
+    font-size: 19px;
+    line-height: 1.4;
+
+    color: #154734;
+}
+
+.learning-card p {
+    margin: 0;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .learning-intro {
+        margin-top: 35px;
+
+        padding: 24px;
+
+        gap: 18px;
+
+        align-items: flex-start;
+    }
+
+    .learning-intro-icon {
+        width: 62px;
+        height: 62px;
+
+        border-radius: 16px;
+
+        font-size: 24px;
+    }
+
+    .learning-intro-content h2 {
+        font-size: 22px;
+    }
+
+    .learning-activities-heading h2 {
+        font-size: 26px;
+    }
+
+    .learning-activities-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .learning-card {
+        padding: 24px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE HP KECIL
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .learning-intro {
+        padding: 20px;
+    }
+
+    .learning-intro-icon {
+        width: 52px;
+        height: 52px;
+
+        font-size: 20px;
+    }
+
+    .learning-intro-content span {
+        font-size: 12px;
+    }
+
+    .learning-intro-content h2 {
+        font-size: 19px;
+    }
+
+    .learning-intro-content p {
+        font-size: 13px;
+    }
+
+    .learning-card {
+        padding: 21px;
+    }
+
+    .learning-card h3 {
+        font-size: 17px;
+    }
+
+    .learning-card p {
+        font-size: 13px;
+    }
+
+}
+
+/* =====================================================
+   DOKUMENTASI KEGIATAN
+===================================================== */
+
+.learning-documentation {
+    max-width: 1100px;
+
+    margin: 70px auto 0;
+
+    padding: 30px 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 22px;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+.learning-documentation-content {
+    max-width: 700px;
+}
+
+.learning-documentation-content h2 {
+    margin: 0 0 10px;
+
+    font-size: 25px;
+
+    line-height: 1.35;
+
+    color: #154734;
+}
+
+.learning-documentation-content h2 span {
+    color: #0b6b46;
+}
+
+.learning-documentation-content p {
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+}
+
+.learning-documentation-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    flex-shrink: 0;
+
+    padding: 12px 19px;
+
+    border-radius: 10px;
+
+    background: #0b6b46;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.learning-documentation-link:hover {
+    background: #154734;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .learning-documentation {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-top: 55px;
+
+        padding: 24px;
+    }
+
+    .learning-documentation-content h2 {
+        font-size: 22px;
+    }
+
+    .learning-documentation-link {
+        width: 100%;
+
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+}
+
+/* =====================================================
+   DOKUMEN KURIKULUM
+===================================================== */
+
+.curriculum-document {
+    max-width: 1100px;
+    margin: 70px auto 0;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5ebe7;
+    border-radius: 22px;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =====================================================
+   ICON DOKUMEN
+===================================================== */
+
+.curriculum-document-icon {
+    width: 65px;
+    height: 65px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #eef7f2;
+    color: #0b6b46;
+
+    font-size: 25px;
+}
+
+
+/* =====================================================
+   KONTEN DOKUMEN
+===================================================== */
+
+.curriculum-document-content {
+    flex: 1;
+}
+
+.curriculum-document-content .section-label {
+    margin-bottom: 7px;
+}
+
+.curriculum-document-content h2 {
+    margin: 0 0 8px;
+
+    font-size: 24px;
+    line-height: 1.35;
+
+    color: #154734;
+}
+
+.curriculum-document-content h2 span {
+    color: #0b6b46;
+}
+
+.curriculum-document-content p {
+    max-width: 650px;
+
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    color: #666;
+}
+
+
+/* =====================================================
+   ACTION / STATUS
+===================================================== */
+
+.curriculum-document-action {
+    flex-shrink: 0;
+}
+
+.document-status {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 8px;
+
+    padding: 10px 14px;
+
+    border-radius: 10px;
+
+    background: #f4f7f5;
+
+    color: #68756e;
+
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.document-status i {
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   JIKA NANTI TOMBOL DOKUMEN DIAKTIFKAN
+===================================================== */
+
+.curriculum-document-action a {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 18px;
+
+    border-radius: 10px;
+
+    background: #0b6b46;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.curriculum-document-action a:hover {
+    background: #154734;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .curriculum-document {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-top: 55px;
+
+        padding: 24px;
+    }
+
+    .curriculum-document-icon {
+        width: 55px;
+        height: 55px;
+
+        font-size: 21px;
+    }
+
+    .curriculum-document-content h2 {
+        font-size: 22px;
+    }
+
+    .curriculum-document-content p {
+        font-size: 13px;
+    }
+
+    .curriculum-document-action {
+        width: 100%;
+    }
+
+    .document-status {
+        width: 100%;
+
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+    .curriculum-document-action a {
+        width: 100%;
+
+        justify-content: center;
+
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE HP KECIL
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .curriculum-document {
+        padding: 20px;
+    }
+
+    .curriculum-document-content h2 {
+        font-size: 20px;
+    }
+
+    .curriculum-document-content p {
+        font-size: 13px;
+    }
+
+}
+
+/* =====================================================
+   PENGADUAN BULLYING
+===================================================== */
+
+.bullying-report {
+    background: #f8faf9;
+}
+
+.bullying-report-card {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    padding: 30px 32px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+    border-radius: 22px;
+
+    box-shadow:
+        0 10px 28px rgba(21, 71, 52, 0.06);
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.bullying-report-icon {
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 17px;
+
+    background: #edf7f2;
+    color: #0b6b46;
+
+    font-size: 27px;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.bullying-report-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.bullying-report-content .section-label {
+    margin-bottom: 7px;
+}
+
+.bullying-report-content h2 {
+    margin: 0 0 10px;
+
+    color: #154734;
+
+    font-size: 27px;
+    line-height: 1.3;
+}
+
+.bullying-report-content h2 span {
+    color: #0b6b46;
+}
+
+.bullying-report-content > p {
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #66736c;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* =====================================================
+   PENANGGUNG JAWAB
+===================================================== */
+
+.bullying-report-contact {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-top: 17px;
+}
+
+.bullying-report-contact span {
+    margin-bottom: 2px;
+
+    color: #7b8780;
+
+    font-size: 12px;
+}
+
+.bullying-report-contact strong {
+    color: #154734;
+
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   TOMBOL WHATSAPP
+===================================================== */
+
+.bullying-report-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+.bullying-contact-button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-height: 40px;
+
+    padding: 10px 15px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    background: #0b6b46;
+    color: #ffffff !important;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        transform .25s ease;
+}
+
+.bullying-contact-button i {
+    font-size: 14px;
+}
+
+.bullying-contact-button:hover {
+    background: #154734;
+    color: #ffffff !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =====================================================
+   TOMBOL SEKUNDER
+===================================================== */
+
+.bullying-contact-secondary {
+    background: #edf7f2;
+
+    border-color: #d7e9df;
+
+    color: #0b6b46 !important;
+}
+
+.bullying-contact-secondary:hover {
+    background: #dceee5;
+
+    border-color: #c8dfd3;
+
+    color: #154734 !important;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .bullying-report-card {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+        padding: 25px;
+    }
+
+    .bullying-report-icon {
+        width: 60px;
+        height: 60px;
+
+        font-size: 24px;
+    }
+
+    .bullying-report-content h2 {
+        font-size: 24px;
+    }
+
+    .bullying-report-actions {
+        width: 100%;
+    }
+
+    .bullying-contact-button {
+        flex: 1;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE HP
+===================================================== */
+
+@media (max-width: 520px) {
+
+    .bullying-report-card {
+        padding: 21px;
+    }
+
+    .bullying-report-content h2 {
+        font-size: 22px;
+    }
+
+    .bullying-report-content > p {
+        font-size: 13px;
+    }
+
+    .bullying-report-contact strong {
+        font-size: 14px;
+    }
+
+    .bullying-report-actions {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .bullying-contact-button {
+        width: 100%;
+    }
+
+}
+
+/* =====================================================
+   KESISWAAN - OPSI MENU
+   Data Siswa | Data Kelas | Prestasi | Kegiatan Siswa
+===================================================== */
+
+.student-affairs-options {
+    width: 100%;
+    max-width: 1080px;
+
+    margin: 42px auto 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   CARD UTAMA
+===================================================== */
+
+.student-affairs-option {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+    min-height: 155px;
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+    border-radius: 18px;
+
+    color: #263a31;
+    text-decoration: none;
+
+    box-shadow:
+        0 6px 18px rgba(21, 71, 52, 0.04);
+
+    transform: translateY(0);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease,
+        background-color 0.22s ease;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.student-affairs-option:hover {
+    transform: translateY(-3px);
+
+    border-color: #cbded3;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 12px 26px rgba(21, 71, 52, 0.08);
+}
+
+
+/* =====================================================
+   SAAT DIKLIK
+===================================================== */
+
+.student-affairs-option:active {
+    transform: translateY(0) scale(0.985);
+
+    box-shadow:
+        0 5px 12px rgba(21, 71, 52, 0.06);
+
+    transition-duration: 0.08s;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.student-affairs-option-icon {
+    width: 56px;
+    height: 56px;
+
+    flex: 0 0 56px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 16px;
+
+    border-radius: 14px;
+
+    background: #edf7f2;
+    color: #0b6b46;
+
+    font-size: 20px;
+
+    transition:
+        background-color 0.22s ease,
+        color 0.22s ease,
+        transform 0.22s ease;
+}
+
+
+/* icon saat hover */
+
+.student-affairs-option:hover
+.student-affairs-option-icon {
+    background: #0b6b46;
+    color: #ffffff;
+
+    transform: scale(1.03);
+}
+
+
+/* icon saat klik */
+
+.student-affairs-option:active
+.student-affairs-option-icon {
+    transform: scale(0.95);
+}
+
+
+/* =====================================================
+   KONTEN
+===================================================== */
+
+.student-affairs-option-content {
+    min-width: 0;
+
+    padding-right: 28px;
+}
+
+
+/* label kecil */
+
+.student-affairs-option-content span {
+    display: block;
+
+    margin: 0 0 4px;
+
+    color: #7d8983;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+}
+
+
+/* judul */
+
+.student-affairs-option-content h3 {
+    margin: 0 0 7px;
+
+    color: #154734;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    transition:
+        color 0.22s ease;
+}
+
+.student-affairs-option:hover
+.student-affairs-option-content h3 {
+    color: #0b6b46;
+}
+
+
+/* deskripsi */
+
+.student-affairs-option-content p {
+    margin: 0 0 8px;
+
+    color: #68756e;
+
+    font-size: 13px;
+    font-weight: 400;
+
+    line-height: 1.65;
+}
+
+
+/* informasi tambahan */
+
+.student-affairs-option-content strong {
+    display: inline-block;
+
+    color: #0b6b46;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   PANAH
+===================================================== */
+
+.student-option-arrow {
+    position: absolute;
+
+    top: 50%;
+    right: 20px;
+
+    color: #9aaa9f;
+
+    font-size: 12px;
+
+    transform: translateY(-50%);
+
+    transition:
+        color 0.22s ease,
+        transform 0.22s ease;
+}
+
+
+/* hover */
+
+.student-affairs-option:hover
+.student-option-arrow {
+    color: #0b6b46;
+
+    transform:
+        translate(4px, -50%);
+}
+
+
+/* klik */
+
+.student-affairs-option:active
+.student-option-arrow {
+    transform:
+        translate(6px, -50%) scale(0.92);
+}
+
+
+/* =====================================================
+   FOCUS KEYBOARD
+===================================================== */
+
+.student-affairs-option:focus-visible {
+    outline: 2px solid #0b6b46;
+    outline-offset: 3px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .student-affairs-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 15px;
+
+        margin-top: 35px;
+    }
+
+    .student-affairs-option {
+        min-height: 145px;
+
+        padding: 21px;
+    }
+
+    .student-affairs-option-icon {
+        width: 52px;
+        height: 52px;
+
+        flex-basis: 52px;
+
+        margin-right: 14px;
+
+        font-size: 19px;
+    }
+
+    .student-affairs-option-content h3 {
+        font-size: 17px;
+    }
+
+    .student-affairs-option-content p {
+        font-size: 12px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 680px) {
+
+    .student-affairs-options {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-top: 30px;
+    }
+
+    .student-affairs-option {
+        min-height: auto;
+
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+    .student-affairs-option-icon {
+        width: 50px;
+        height: 50px;
+
+        flex-basis: 50px;
+
+        margin-right: 13px;
+
+        border-radius: 13px;
+
+        font-size: 18px;
+    }
+
+    .student-affairs-option-content {
+        padding-right: 25px;
+    }
+
+    .student-affairs-option-content h3 {
+        font-size: 16px;
+    }
+
+    .student-affairs-option-content p {
+        font-size: 12px;
+
+        line-height: 1.6;
+    }
+
+    .student-affairs-option-content strong {
+        font-size: 11px;
+    }
+
+    .student-option-arrow {
+        right: 17px;
+    }
+
+}
+
+
+/* =====================================================
+   HP KECIL
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .student-affairs-option {
+        padding: 18px;
+    }
+
+    .student-affairs-option-icon {
+        width: 46px;
+        height: 46px;
+
+        flex-basis: 46px;
+
+        margin-right: 12px;
+
+        font-size: 17px;
+    }
+
+    .student-affairs-option-content span {
+        font-size: 9px;
+    }
+
+    .student-affairs-option-content h3 {
+        font-size: 15px;
+    }
+
+    .student-affairs-option-content p {
+        font-size: 11.5px;
+    }
+
+}
+
+/* =====================================================
+   KESISWAAN - HALAMAN ISI
+   Data Siswa | Data Kelas | Prestasi | Kegiatan Siswa
+===================================================== */
+
+
+/* =====================================================
+   DATA SISWA
+===================================================== */
+
+.student-stat-grid {
+    max-width: 800px;
+
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.student-stat-card {
+    position: relative;
+
+    padding: 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow:
+        0 8px 24px rgba(21,71,52,.05);
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+}
+
+.student-stat-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cbded3;
+
+    box-shadow:
+        0 14px 30px rgba(21,71,52,.09);
+}
+
+.student-stat-card:active {
+    transform: scale(.985);
+
+    transition-duration: .08s;
+}
+
+
+/* ICON DATA SISWA */
+
+.student-stat-icon,
+.achievement-icon,
+.student-activity-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 16px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #edf7f2;
+
+    color: #0b6b46;
+
+    font-size: 22px;
+
+    transition:
+        background-color .22s ease,
+        color .22s ease,
+        transform .22s ease;
+}
+
+.student-stat-card:hover .student-stat-icon,
+.achievement-card:hover .achievement-icon,
+.student-activity-card:hover .student-activity-icon {
+    background: #0b6b46;
+
+    color: #ffffff;
+
+    transform: scale(1.04);
+}
+
+
+/* ANGKA */
+
+.student-stat-card strong {
+    display: block;
+
+    color: #154734;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    transition: color .22s ease;
+}
+
+.student-stat-card:hover strong {
+    color: #0b6b46;
+}
+
+.student-stat-card span {
+    display: block;
+
+    margin-top: 8px;
+
+    color: #68756e;
+
+    font-size: 13px;
+}
+
+
+/* INFORMASI DATA */
+
+.student-data-note {
+    max-width: 800px;
+
+    margin: 30px auto 0;
+
+    padding: 18px 20px;
+
+    display: flex;
+
+    gap: 13px;
+
+    background: #edf7f2;
+
+    border: 1px solid #d8ebe0;
+
+    border-radius: 14px;
+}
+
+.student-data-note > i {
+    flex-shrink: 0;
+
+    color: #0b6b46;
+
+    font-size: 16px;
+
+    margin-top: 2px;
+}
+
+.student-data-note strong {
+    color: #154734;
+
+    font-size: 13px;
+}
+
+.student-data-note p {
+    margin: 4px 0 0;
+
+    color: #68756e;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   DATA KELAS
+===================================================== */
+
+.class-data-grid {
+    max-width: 1000px;
+
+    margin: 45px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.class-card {
+    position: relative;
+
+    padding: 24px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 7px 22px rgba(21,71,52,.04);
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+}
+
+.class-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cbded3;
+
+    box-shadow:
+        0 13px 28px rgba(21,71,52,.08);
+}
+
+.class-card:active {
+    transform: scale(.985);
+
+    transition-duration: .08s;
+}
+
+.class-card span {
+    color: #7b8780;
+
+    font-size: 11px;
+}
+
+.class-card h3 {
+    margin: 5px 0 10px;
+
+    color: #154734;
+
+    font-size: 21px;
+
+    transition: color .22s ease;
+}
+
+.class-card:hover h3 {
+    color: #0b6b46;
+}
+
+.class-card strong {
+    display: block;
+
+    color: #0b6b46;
+
+    font-size: 28px;
+
+    line-height: 1.1;
+}
+
+.class-card small {
+    color: #68756e;
+
+    font-size: 12px;
+}
+
+
+/* TOTAL */
+
+.class-total {
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding: 22px 25px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    background: #154734;
+
+    border-radius: 17px;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 10px 26px rgba(21,71,52,.10);
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease;
+}
+
+.class-total:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 13px 30px rgba(21,71,52,.14);
+}
+
+.class-total:active {
+    transform: scale(.99);
+
+    transition-duration: .08s;
+}
+
+.class-total span {
+    font-size: 13px;
+}
+
+.class-total strong {
+    font-size: 28px;
+}
+
+/* =====================================================
+   PEMISAH PRESTASI SISWA
+===================================================== */
+
+.achievement-divider {
+    max-width: 1000px;
+
+    margin: 55px auto 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.achievement-divider-line {
+    flex: 1;
+
+    height: 1px;
+
+    background: #dfe8e3;
+}
+
+.achievement-divider-caption {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px 18px;
+
+    background: #edf7f2;
+
+    border: 1px solid #d9ebe1;
+
+    border-radius: 999px;
+}
+
+.achievement-divider-caption > span {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #0b6b46;
+
+    color: #ffffff;
+
+    font-size: 13px;
+}
+
+.achievement-divider-caption strong {
+    display: block;
+
+    color: #154734;
+
+    font-size: 13px;
+
+    line-height: 1.3;
+}
+
+.achievement-divider-caption small {
+    display: block;
+
+    margin-top: 2px;
+
+    color: #718078;
+
+    font-size: 10px;
+
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .achievement-divider {
+        margin: 40px auto 28px;
+
+        gap: 10px;
+    }
+
+    .achievement-divider-caption {
+        gap: 8px;
+
+        padding: 8px 13px;
+    }
+
+    .achievement-divider-caption > span {
+        width: 28px;
+        height: 28px;
+
+        font-size: 11px;
+    }
+
+    .achievement-divider-caption strong {
+        font-size: 11px;
+    }
+
+    .achievement-divider-caption small {
+        font-size: 9px;
+    }
+
+}
+
+/* =====================================================
+   PRESTASI & KEGIATAN SISWA
+===================================================== */
+
+.achievement-grid,
+.student-activities-grid {
+    max-width: 1000px;
+
+    margin: 0 auto 100px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   KARTU PRESTASI / KEGIATAN
+===================================================== */
+
+.achievement-card,
+.student-activity-card {
+    position: relative;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+
+    border-radius: 19px;
+
+    box-shadow:
+        0 8px 25px rgba(21, 71, 52, 0.05);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.achievement-card:hover,
+.student-activity-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cbded3;
+
+    box-shadow:
+        0 14px 30px rgba(21, 71, 52, 0.09);
+}
+
+.achievement-card:active,
+.student-activity-card:active {
+    transform: scale(0.985);
+
+    transition-duration: 0.08s;
+}
+
+
+/* =====================================================
+   KARTU KATEGORI PRESTASI
+   Dipakai pada 4 kartu pertama
+===================================================== */
+
+.achievement-card > .achievement-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 28px 28px 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #edf7f2;
+
+    color: #0b6b46;
+
+    font-size: 22px;
+
+    transition:
+        background-color 0.22s ease,
+        color 0.22s ease,
+        transform 0.22s ease;
+}
+
+.achievement-card:hover > .achievement-icon {
+    background: #0b6b46;
+
+    color: #ffffff;
+
+    transform: scale(1.04);
+}
+
+
+/* Judul kategori */
+
+.achievement-card > h3 {
+    margin: 0 28px 8px;
+
+    color: #154734;
+
+    font-size: 18px;
+
+    line-height: 1.35;
+
+    transition:
+        color 0.22s ease;
+}
+
+.achievement-card:hover > h3 {
+    color: #0b6b46;
+}
+
+
+/* Deskripsi kategori */
+
+.achievement-card > p {
+    margin: 0 28px 28px;
+
+    color: #68756e;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   PRESTASI SISWA BERGAMBAR
+   Dipakai pada 6 kartu setelah kategori
+===================================================== */
+
+.achievement-image {
+    width: 100%;
+
+    height: 250px;
+
+    overflow: hidden;
+
+    background: #edf7f2;
+}
+
+.achievement-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.achievement-card:hover
+.achievement-image img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   ISI KARTU PRESTASI SISWA
+===================================================== */
+
+.achievement-content {
+    padding: 21px 24px 24px;
+}
+
+
+/* Label */
+
+.achievement-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #7b8780;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.7px;
+
+    text-transform: uppercase;
+}
+
+
+/* Nama siswa */
+
+.achievement-content h3 {
+    margin: 0 0 7px;
+
+    color: #154734;
+
+    font-size: 19px;
+
+    line-height: 1.35;
+
+    transition:
+        color 0.22s ease;
+}
+
+.achievement-card:hover
+.achievement-content h3 {
+    color: #0b6b46;
+}
+
+
+/* Nama prestasi */
+
+.achievement-title {
+    margin: 0 0 8px;
+
+    color: #56635b;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* Kelas / tingkat / tahun */
+
+.achievement-meta {
+    display: inline-block;
+
+    color: #0b6b46;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    line-height: 1.5;
+}
+
+
+/* =====================================================
+   KEGIATAN SISWA
+===================================================== */
+
+.student-activity-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 28px 28px 16px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: #edf7f2;
+
+    color: #0b6b46;
+
+    font-size: 22px;
+
+    transition:
+        background-color 0.22s ease,
+        color 0.22s ease,
+        transform 0.22s ease;
+}
+
+.student-activity-card:hover .student-activity-icon {
+    background: #0b6b46;
+
+    color: #ffffff;
+
+    transform: scale(1.04);
+}
+
+.student-activity-card h3 {
+    margin: 0 28px 8px;
+
+    color: #154734;
+
+    font-size: 18px;
+
+    line-height: 1.35;
+}
+
+.student-activity-card:hover h3 {
+    color: #0b6b46;
+}
+
+.student-activity-card p {
+    margin: 0 28px 28px;
+
+    color: #68756e;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+/* =====================================================
+   KEGIATAN SISWA - CARD
+===================================================== */
+
+.student-activities-grid {
+    max-width: 1000px;
+
+    margin: 45px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.student-activity-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(21, 71, 52, 0.05);
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.student-activity-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cbded3;
+
+    box-shadow:
+        0 14px 30px rgba(21, 71, 52, 0.09);
+}
+
+.student-activity-card:active {
+    transform: scale(0.985);
+
+    transition-duration: 0.08s;
+}
+
+
+/* =====================================================
+   FOTO
+===================================================== */
+
+.student-activity-image {
+    width: 100%;
+    height: 235px;
+
+    overflow: hidden;
+
+    background: #edf7f2;
+}
+
+.student-activity-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform 0.35s ease;
+}
+
+.student-activity-card:hover
+.student-activity-image img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   KONTEN
+===================================================== */
+
+.student-activity-content {
+    padding: 20px 22px 22px;
+}
+
+
+/* Kelas */
+
+.student-activity-label {
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    padding: 5px 9px;
+
+    background: #edf7f2;
+
+    color: #0b6b46;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+}
+
+
+/* Judul kegiatan */
+
+.student-activity-content h3 {
+    margin: 0 0 7px;
+
+    color: #154734;
+
+    font-size: 18px;
+
+    line-height: 1.4;
+
+    transition:
+        color .22s ease;
+}
+
+.student-activity-card:hover
+.student-activity-content h3 {
+    color: #0b6b46;
+}
+
+
+/* Deskripsi */
+
+.student-activity-content p {
+    margin: 0 0 13px;
+
+    color: #68756e;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+}
+
+
+/* Tanggal */
+
+.student-activity-meta {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #7b8780;
+
+    font-size: 11px;
+}
+
+.student-activity-meta i {
+    color: #0b6b46;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .student-activities-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .student-activity-image {
+        height: 230px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .student-activity-image {
+        height: 210px;
+    }
+
+    .student-activity-content {
+        padding: 18px 20px 20px;
+    }
+
+    .student-activity-content h3 {
+        font-size: 17px;
+    }
+
+}
+
+/* =====================================================
+   FOCUS / AKSESIBILITAS
+===================================================== */
+
+.achievement-card:focus-visible,
+.student-activity-card:focus-visible {
+    outline: 2px solid #0b6b46;
+
+    outline-offset: 3px;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .achievement-grid,
+    .student-activities-grid {
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+    .achievement-card > .achievement-icon,
+    .student-activity-icon {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .achievement-card > h3,
+    .achievement-card > p,
+    .student-activity-card h3,
+    .student-activity-card p {
+        margin-left: 24px;
+        margin-right: 24px;
+    }
+
+    .achievement-content {
+        padding: 20px 21px 22px;
+    }
+
+    .achievement-image {
+        height: 230px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE HP
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .achievement-card > .achievement-icon,
+    .student-activity-icon {
+        width: 52px;
+        height: 52px;
+
+        margin: 21px 20px 14px;
+
+        font-size: 19px;
+    }
+
+    .achievement-card > h3,
+    .achievement-card > p,
+    .student-activity-card h3,
+    .student-activity-card p {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .achievement-card > h3,
+    .student-activity-card h3 {
+        font-size: 17px;
+    }
+
+    .achievement-card > p,
+    .student-activity-card p {
+        font-size: 12px;
+    }
+
+    .achievement-image {
+        height: 210px;
+    }
+
+    .achievement-content {
+        padding: 18px 20px 21px;
+    }
+
+    .achievement-content h3 {
+        font-size: 17px;
+    }
+
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .student-stat-grid,
+    .achievement-grid,
+    .student-activities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .class-data-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .student-stat-card {
+        padding: 24px;
+    }
+
+    .achievement-card,
+    .student-activity-card {
+        padding: 24px;
+    }
+
+}
+
+
+/* =====================================================
+   HP KECIL
+===================================================== */
+
+@media (max-width: 450px) {
+
+    .class-data-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .class-total {
+        padding: 18px;
+    }
+
+    .student-stat-card strong {
+        font-size: 30px;
+    }
+
+    .class-card strong {
+        font-size: 25px;
+    }
+
+    .achievement-card h3,
+    .student-activity-card h3 {
+        font-size: 17px;
+    }
+
+}
+
+/* =====================================================
+   KEGIATAN KHUSUS MIS AL MUHAJIRIN
+===================================================== */
+
+.special-events-section {
+    max-width: 1100px;
+
+    margin: 80px auto 0;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.special-events-grid {
+    margin-top: 40px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.special-event-card {
+    display: flex;
+
+    align-items: stretch;
+
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 7px 22px rgba(21, 71, 52, 0.045);
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+}
+
+.special-event-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #cbded3;
+
+    box-shadow:
+        0 13px 28px rgba(21, 71, 52, 0.08);
+}
+
+.special-event-card:active {
+    transform: scale(.985);
+
+    transition-duration: .08s;
+}
+
+
+/* =====================================================
+   TANGGAL
+===================================================== */
+
+.special-event-date {
+    width: 105px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 12px;
+
+    background: #edf7f2;
+
+    border-right: 1px solid #dcebe2;
+
+    color: #0b6b46;
+
+    text-align: center;
+}
+
+.special-event-date strong {
+    display: block;
+
+    font-size: 24px;
+
+    line-height: 1.1;
+}
+
+.special-event-date span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #6f7d75;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.special-event-content {
+    min-width: 0;
+
+    padding: 20px 22px;
+}
+
+.special-event-category {
+    display: inline-block;
+
+    margin-bottom: 6px;
+
+    color: #7b8780;
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: .7px;
+
+    text-transform: uppercase;
+}
+
+.special-event-content h3 {
+    margin: 0 0 7px;
+
+    color: #154734;
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+    transition: color .2s ease;
+}
+
+.special-event-card:hover .special-event-content h3 {
+    color: #0b6b46;
+}
+
+.special-event-content p {
+    margin: 0;
+
+    color: #68756e;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .special-events-section {
+        margin-top: 60px;
+    }
+
+    .special-events-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-top: 30px;
+    }
+
+    .special-event-date {
+        width: 92px;
+
+        padding: 17px 10px;
+    }
+
+    .special-event-date strong {
+        font-size: 21px;
+    }
+
+    .special-event-content {
+        padding: 18px;
+    }
+
+}
+
+@media (max-width: 430px) {
+
+    .special-event-date {
+        width: 82px;
+    }
+
+    .special-event-date strong {
+        font-size: 19px;
+    }
+
+    .special-event-content h3 {
+        font-size: 16px;
+    }
+
+}
+
+/* =====================================================
+   MITRA & KERJA SAMA
+===================================================== */
+
+.partners-section {
+    padding-top: 20px;
+    padding-bottom: 60px;
+
+    background: #f8faf9;
+}
+
+.partners-section .section-heading {
+    margin-bottom: 28px;
+}
+
+.partners-grid {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   CARD
+===================================================== */
+
+.partner-card {
+    overflow: hidden;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 6px 20px rgba(21, 71, 52, 0.045);
+
+    transition:
+        transform .22s ease,
+        border-color .22s ease,
+        box-shadow .22s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #cbded3;
+
+    box-shadow:
+        0 12px 26px rgba(21, 71, 52, 0.08);
+}
+
+.partner-card:active {
+    transform: scale(.985);
+
+    transition-duration: .08s;
+}
+
+
+/* =====================================================
+   FOTO
+===================================================== */
+
+.partner-image {
+    width: 100%;
+    height: 220px;
+
+    overflow: hidden;
+
+    background: #edf7f2;
+}
+
+.partner-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition:
+        transform .35s ease;
+}
+
+.partner-card:hover
+.partner-image img {
+    transform: scale(1.035);
+}
+
+
+/* =====================================================
+   KONTEN
+===================================================== */
+
+.partner-content {
+    padding: 18px 20px 20px;
+}
+
+.partner-label {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #7b8780;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: .7px;
+
+    text-transform: uppercase;
+}
+
+.partner-content h2 {
+    margin: 0;
+
+    color: #154734;
+
+    font-size: 20px;
+
+    line-height: 1.3;
+
+    transition: color .22s ease;
+}
+
+.partner-card:hover
+.partner-content h2 {
+    color: #0b6b46;
+}
+
+.partner-program {
+    display: inline-flex;
+
+    margin-top: 7px;
+
+    padding: 4px 9px;
+
+    background: #edf7f2;
+
+    color: #0b6b46;
+
+    border-radius: 999px;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.partner-content p {
+    margin: 10px 0 0;
+
+    color: #68756e;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+}
+
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 800px) {
+
+    .partners-section {
+        padding-top: 15px;
+        padding-bottom: 50px;
+    }
+
+    .partners-section .section-heading {
+        margin-bottom: 24px;
+    }
+
+    .partners-grid {
+        gap: 15px;
+    }
+
+    .partner-image {
+        height: 200px;
+    }
+
+}
+
+
+/* =====================================================
+   RESPONSIVE HP
+===================================================== */
+
+@media (max-width: 600px) {
+
+    .partners-grid {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .partner-image {
+        height: 220px;
+    }
+
+    .partner-content {
+        padding: 17px 18px 19px;
+    }
+
+}
+
+@media (max-width: 420px) {
+
+    .partner-image {
+        height: 200px;
+    }
+
+    .partner-content h2 {
+        font-size: 19px;
+    }
+
+}
+
+/* =====================================================
+   PROFIL - OPSI / SUBMENU
+===================================================== */
+
+.profile-options {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 32px auto 0;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 18px;
+}
+
+
+/* =====================================================
+   CARD OPSI PROFIL
+===================================================== */
+
+.profile-option-card {
+    position: relative;
+
+    display: flex;
+    align-items: flex-start;
+
+    width: 100%;
+    max-width: 520px;
+
+    margin: 0 auto;
+    margin-bottom: 50px;
+    gap: 16px;
+
+    padding: 22px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+
+    border-radius: 18px;
+
+    color: #263a31;
+    text-decoration: none;
+
+    box-shadow:
+        0 6px 18px rgba(21, 71, 52, 0.04);
+
+    transform: translateY(0);
+
+    transition:
+        transform .22s ease,
+        box-shadow .22s ease,
+        border-color .22s ease;
+}
+
+
+/* =====================================================
+   HOVER
+===================================================== */
+
+.profile-option-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #cbded3;
+
+    box-shadow:
+        0 12px 26px rgba(21, 71, 52, 0.08);
+}
+
+
+/* =====================================================
+   ACTIVE / DIKLIK
+===================================================== */
+
+.profile-option-card:active {
+    transform: scale(.985);
+
+    transition-duration: .08s;
+}
+
+
+/* =====================================================
+   ICON
+===================================================== */
+
+.profile-option-icon {
+    width: 54px;
+    height: 54px;
+
+    flex: 0 0 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #edf7f2;
+
+    color: #0b6b46;
+
+    font-size: 20px;
+
+    transition:
+        background .22s ease,
+        color .22s ease,
+        transform .22s ease;
+}
+
+.profile-option-card:hover .profile-option-icon {
+    background: #0b6b46;
+
+    color: #ffffff;
+
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   KONTEN
+===================================================== */
+
+.profile-option-content {
+    min-width: 0;
+
+    padding-right: 25px;
+
+    text-align: left;
+}
+
+.profile-option-content > span {
+    display: block;
+
+    margin: 0 0 4px;
+
+    color: #7d8983;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    letter-spacing: .7px;
+
+    text-transform: uppercase;
+}
+
+.profile-option-content h3 {
+    margin: 0 0 6px;
+
+    color: #154734;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    line-height: 1.35;
+
+    transition: color .22s ease;
+}
+
+.profile-option-card:hover
+.profile-option-content h3 {
+    color: #0b6b46;
+}
+
+.profile-option-content p {
+    margin: 0 0 8px;
+
+    color: #68756e;
+
+    font-size: 12px;
+    font-weight: 400;
+
+    line-height: 1.6;
+}
+
+.profile-option-content strong {
+    display: inline-block;
+
+    color: #0b6b46;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    line-height: 1.4;
+}
+
+
+/* =====================================================
+   PANAH
+===================================================== */
+
+.profile-option-arrow {
+    position: absolute;
+
+    top: 50%;
+    right: 18px;
+
+    color: #9aaa9f;
+
+    font-size: 12px;
+
+    transform: translateY(-50%);
+
+    transition:
+        color .22s ease,
+        transform .22s ease;
+}
+
+.profile-option-card:hover
+.profile-option-arrow {
+    color: #0b6b46;
+
+    transform:
+        translate(4px, -50%);
+}
+
+
+/* =====================================================
+   KALAU HANYA ADA SATU OPSI
+   Contoh: hanya Mitra & Kerja Sama
+===================================================== */
+
+.profile-options > .profile-option-card:only-child {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: 520px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =====================================================
+   TANGGAL KEGIATAN MITRA
+===================================================== */
+
+.partner-date {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 10px;
+
+    color: #7b8780;
+
+    font-size: 11px;
+
+    line-height: 1.4;
+}
+
+.partner-date i {
+    color: #0b6b46;
+
+    font-size: 11px;
+}
+
+
+/* =====================================================
+   FOCUS
+===================================================== */
+
+.profile-option-card:focus-visible {
+    outline: 2px solid #0b6b46;
+
+    outline-offset: 3px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .profile-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 15px;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 680px) {
+
+    .profile-options {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-top: 28px;
+    }
+
+    .profile-option-card {
+        width: 100%;
+        max-width: 100%;
+
+        padding: 20px;
+
+        border-radius: 16px;
+    }
+
+    .profile-option-icon {
+        width: 50px;
+        height: 50px;
+
+        flex-basis: 50px;
+
+        font-size: 18px;
+    }
+
+    .profile-option-content {
+        padding-right: 22px;
+    }
+
+    .profile-option-content h3 {
+        font-size: 16px;
+    }
+
+    .profile-option-content p {
+        font-size: 12px;
+    }
+
+    .profile-option-arrow {
+        right: 16px;
+    }
+
+}
+
+
+/* =====================================================
+   HP KECIL
+===================================================== */
+
+@media (max-width: 420px) {
+
+    .profile-option-card {
+        padding: 18px;
+    }
+
+    .profile-option-icon {
+        width: 46px;
+        height: 46px;
+
+        flex-basis: 46px;
+
+        font-size: 17px;
+    }
+
+    .profile-option-content h3 {
+        font-size: 15px;
+    }
+
+    .profile-option-content p {
+        font-size: 11.5px;
+    }
+
+}

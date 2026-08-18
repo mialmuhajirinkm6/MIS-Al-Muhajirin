@@ -233,7 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
        menjadi
        6281234567890
     ===================================================== */
-    const whatsappNumber = "6283112250227";
+    const whatsappNumber = "6282148248725";
 
     //    SUBMIT FORM
     whatsappForm.addEventListener("submit", event => {
@@ -462,4 +462,30 @@ document.addEventListener("DOMContentLoaded", () => {
             }, 350);
         }, 2500);
     }
+});
+
+/* =====================================================
+   DROPDOWN AKADEMIK - MOBILE
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const dropdown = document.querySelector(".nav-item.dropdown");
+
+    if (!dropdown) return;
+
+    const dropdownLink = dropdown.querySelector(".dropdown-toggle");
+
+    dropdownLink.addEventListener("click", function (e) {
+
+        if (window.innerWidth <= 768) {
+
+            e.preventDefault();
+
+            dropdown.classList.toggle("active");
+
+        }
+
+    });
+
 });
