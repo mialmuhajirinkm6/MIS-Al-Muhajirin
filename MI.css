@@ -13052,3 +13052,183 @@ grid-template-columns:1fr;
     }
 
 }
+/* =====================================================
+   NAVBAR DROPDOWN
+===================================================== */
+
+.nav-item.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.dropdown-toggle i {
+    font-size: 10px;
+
+    transition:
+        transform .2s ease;
+}
+
+
+/* =====================================================
+   MENU DROPDOWN
+===================================================== */
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 0;
+
+    min-width: 220px;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2eae5;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 12px 30px
+        rgba(21, 71, 52, .10);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(6px);
+
+    z-index: 9999;
+
+    transition:
+        opacity .2s ease,
+        visibility .2s ease,
+        transform .2s ease;
+}
+
+
+/* buka dropdown */
+
+.nav-item.dropdown:hover
+.dropdown-menu,
+
+.nav-item.dropdown:focus-within
+.dropdown-menu {
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+}
+
+
+/* panah */
+
+.nav-item.dropdown:hover
+.dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+
+/* =====================================================
+   LINK DROPDOWN
+===================================================== */
+
+.dropdown-menu a {
+    display: block;
+
+    padding: 10px 12px;
+
+    border-radius: 8px;
+
+    color: #154734;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    white-space: nowrap;
+
+    transition:
+        background .2s ease,
+        color .2s ease;
+}
+
+.dropdown-menu a:hover {
+    background: #edf7f2;
+
+    color: #0b6b46;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .nav-item.dropdown {
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        position: static;
+
+        width: 100%;
+        min-width: 0;
+
+        margin-top: 5px;
+
+        display: none;
+
+        padding: 5px;
+
+        opacity: 1;
+        visibility: visible;
+
+        transform: none;
+
+        box-shadow: none;
+
+        border-radius: 10px;
+    }
+
+    .nav-item.dropdown:hover
+    .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu a {
+        white-space: normal;
+    }
+
+}
+/* =====================================================
+   FOOTER BRAND LINK
+===================================================== */
+
+.footer-brand-link {
+    color: inherit;
+
+    text-decoration: none;
+
+    transition:
+        color .2s ease,
+        opacity .2s ease;
+}
+
+.footer-brand-link:hover {
+    color: #ccebdc;
+}
+
+.footer-brand-link:active {
+    opacity: .7;
+}

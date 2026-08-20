@@ -125,73 +125,107 @@
                      alt="Logo MIS Al Muhajirin">
             </div>
             <div class="brand-text">
-                <h1>MIS Al Muhajirin</h1>
+                <h1>MIS AL MUHAJIRIN</h1>
                 <span>Kota Banjarmasin</span>
             </div>
         </a>
 
         <!-- NAVIGATION -->
-        <nav class="nav-menu" id="navMenu">
-            <a href="index.html" class="nav-link active">Beranda</a>
-            <a href="profil.html" class="nav-link">Profil</a>
-            <li class="nav-item dropdown">
-            <a href="akademik.html" class="nav-link dropdown-toggle">
-                Akademik
-                <i class="fa-solid fa-chevron-down"></i>
-            </a>
-            <ul class="dropdown-menu">
-                <li>
-                    <a href="akademik.html">
-                        Kurikulum
-                    </a>
-                </li>
-                <li>
-                    <a href="kalender.html">
-                        Kalender Akademik
-                    </a>
-                </li>
-                <li>
-                    <a href="akademik.html#pembelajaran">
-                        Kegiatan Pembelajaran
-                    </a>
-                </li>
-            </ul>
-        </li>
-        <li class="nav-item dropdown">
-            <a href="kesiswaan.html" class="nav-link dropdown-toggle">
-                Kesiswaan
+<nav class="nav-menu" id="navMenu">
+
+    <a href="index.html" class="nav-link active">
+        Beranda
+    </a>
+
+    <a href="profil.html" class="nav-link">
+        Profil
+    </a>
+
+
+    <!-- AKADEMIK -->
+
+    <div class="nav-item dropdown">
+
+        <a
+            href="akademik.html"
+            class="nav-link dropdown-toggle"
+        >
+            Akademik
             <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <div class="dropdown-menu">
+
+            <a href="kurikulum.html">
+                Kurikulum
             </a>
-            <ul class="dropdown-menu">
-                    <li>
-                        <a href="data-siswa.html">
-                            Data Siswa
-                        </a>
-                    </li>
-                    <li>
-                        <a href="data-kelas.html">
-                            Data Kelas
-                        </a>
-                    </li>
-                    <li>
-                        <a href="prestasi.html">
-                            Prestasi
-                        </a>
-                    </li>
-                    <li>
-                        <a href="kegiatan-siswa.html">
-                            Kegiatan Siswa
-                        </a>
-                    </li>
-                </ul>
-            </li>
-            <a href="program.html" class="nav-link">Program</a>
-            <a href="galeri.html" class="nav-link">Galeri</a>
-            <a href="kontak.html" class="nav-link">Kontak</a>
-            <a href="ppdb.html" class="nav-ppdb">PPDB
-                <i class="fa-solid fa-arrow-right"></i>
+
+            <a href="kalender.html">
+                Kalender Akademik
             </a>
-        </nav>
+
+            <a href="kegiatan.html">
+                Kegiatan Pembelajaran
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- KESISWAAN -->
+
+    <div class="nav-item dropdown">
+
+        <a
+            href="kesiswaan.html"
+            class="nav-link dropdown-toggle"
+        >
+            Kesiswaan
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <div class="dropdown-menu">
+
+            <a href="data-siswa.html">
+                Data Siswa
+            </a>
+
+            <a href="data-kelas.html">
+                Data Kelas
+            </a>
+
+            <a href="prestasi.html">
+                Prestasi
+            </a>
+
+            <a href="kegiatan-siswa.html">
+                Kegiatan Siswa
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <a href="program.html" class="nav-link">
+        Program
+    </a>
+
+    <a href="galeri.html" class="nav-link">
+        Galeri
+    </a>
+
+    <a href="kontak.html" class="nav-link">
+        Kontak
+    </a>
+
+    <a href="ppdb.html" class="nav-ppdb">
+        PPDB
+        <i class="fa-solid fa-arrow-right"></i>
+    </a>
+
+</nav>
 
         <!-- MOBILE BUTTON -->
         <button class="menu-toggle"
@@ -723,13 +757,22 @@
     </div>
 
     <div class="footer-bottom">
-        <div class="container">
-            <p>
-                &copy; <span id="currentYear"></span>
+    <div class="container">
+
+        <p>
+            &copy;
+            <span id="currentYear"></span>
+
+            <a
+                href="index.html"
+                class="footer-brand-link"
+            >
                 MIS Al Muhajirin Banjarmasin
-            </p>
-        </div>
+            </a>
+        </p>
+
     </div>
+</div>
 </footer>
 
 <script src="MI.js"></script>
