@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mialmuhajirinkm6.github.io/MIS-Al-Muhajirin/sitemap.xml
+Sitemap: https://mialmuhajirinkm6.sch.id/sitemap.xml
