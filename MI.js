@@ -23,11 +23,23 @@ if (menuToggle && navMenu) {
 //    CLOSE MENU AFTER CLICK
 navLinks.forEach((link) => {
     link.addEventListener("click", () => {
+
+        // Jangan tutup menu jika yang diklik
+        // adalah tombol dropdown
+        if (link.classList.contains("dropdown-toggle")) {
+            return;
+        }
+
         if (!navMenu || !menuToggle) return;
+
         navMenu.classList.remove("active");
+
         const icon = menuToggle.querySelector("i");
-        icon.classList.remove("fa-xmark");
-        icon.classList.add("fa-bars");
+
+        if (icon) {
+            icon.classList.remove("fa-xmark");
+            icon.classList.add("fa-bars");
+        }
     });
 });
 
@@ -465,26 +477,68 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* =====================================================
-   DROPDOWN AKADEMIK - MOBILE
+   DROPDOWN NAVBAR
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const dropdown = document.querySelector(".nav-item.dropdown");
+    const dropdowns =
+        document.querySelectorAll(".nav-item.dropdown");
 
-    if (!dropdown) return;
+    if (!dropdowns.length) return;
 
-    const dropdownLink = dropdown.querySelector(".dropdown-toggle");
 
-    dropdownLink.addEventListener("click", function (e) {
+    dropdowns.forEach((dropdown) => {
 
-        if (window.innerWidth <= 768) {
+        const toggle =
+            dropdown.querySelector(".dropdown-toggle");
 
-            e.preventDefault();
+        if (!toggle) return;
 
-            dropdown.classList.toggle("active");
 
+        toggle.addEventListener("click", function (event) {
+
+            /* =========================================
+               MOBILE
+            ========================================== */
+
+            if (window.innerWidth <= 900) {
+
+                event.preventDefault();
+
+                /* Tutup dropdown lain */
+
+                dropdowns.forEach((otherDropdown) => {
+
+                    if (otherDropdown !== dropdown) {
+                        otherDropdown.classList.remove("active");
+                    }
+
+                });
+
+                /* Toggle dropdown yang dipilih */
+
+                dropdown.classList.toggle("active");
+            }
+
+        });
+
+    });
+
+
+    /* ================================================
+       KLIK DI LUAR DROPDOWN
+    ================================================= */
+
+    document.addEventListener("click", function (event) {
+
+        if (event.target.closest(".nav-item.dropdown")) {
+            return;
         }
+
+        dropdowns.forEach((dropdown) => {
+            dropdown.classList.remove("active");
+        });
 
     });
 

@@ -13053,171 +13053,19 @@ grid-template-columns:1fr;
 
 }
 /* =====================================================
-   DROPDOWN NAVBAR - FINAL FIX
-===================================================== */
-
-.header,
-.navbar,
-.nav-menu,
-.nav-item,
-.dropdown {
-    overflow: visible !important;
-}
-
-.nav-menu {
-    position: relative;
-    z-index: 9999;
-}
-
-
-/* ITEM */
-
-.nav-item.dropdown {
-    position: relative;
-}
-
-
-/* TOGGLE */
-
-.dropdown-toggle {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-
-    cursor: pointer;
-}
-
-.dropdown-toggle i {
-    font-size: 9px;
-
-    transition: transform .2s ease;
-}
-
-
-/* =====================================================
-   DROPDOWN DESKTOP
-===================================================== */
-
-.dropdown-menu {
-    position: absolute;
-
-    top: calc(100% + 6px);
-    left: 0;
-
-    width: 220px;
-
-    margin: 0;
-    padding: 7px;
-
-    box-sizing: border-box;
-
-    background: #ffffff;
-
-    border: 1px solid #e2eae5;
-
-    border-radius: 12px;
-
-    box-shadow:
-        0 14px 30px rgba(21,71,52,.12);
-
-    z-index: 99999;
-
-    display: none !important;
-}
-
-
-/* Tampilkan dropdown */
-
-.nav-item.dropdown:hover > .dropdown-menu,
-.nav-item.dropdown:focus-within > .dropdown-menu {
-    display: block !important;
-}
-
-
-/* PANAH */
-
-.nav-item.dropdown:hover > .dropdown-toggle i {
-    transform: rotate(180deg);
-}
-
-
-/* =====================================================
-   LINK DROPDOWN
-===================================================== */
-
-.dropdown-menu a {
-    display: block;
-
-    width: 100%;
-
-    box-sizing: border-box;
-
-    padding: 10px 12px;
-
-    border-radius: 8px;
-
-    color: #38473f !important;
-
-    background: transparent;
-
-    font-size: 12px;
-    font-weight: 600;
-
-    line-height: 1.4;
-
-    text-decoration: none;
-
-    white-space: nowrap;
-
-    transition:
-        background .2s ease,
-        color .2s ease;
-}
-
-.dropdown-menu a:hover {
-    background: #edf7f2;
-
-    color: #0b6b46 !important;
-}
-
-
-/* =====================================================
-   MOBILE
+   DROPDOWN ACTIVE - MOBILE
 ===================================================== */
 
 @media (max-width: 900px) {
 
-    .nav-item.dropdown {
-        width: 100%;
-    }
-
+    .nav-item.dropdown.active
     .dropdown-menu {
-        position: static;
-
-        width: 100%;
-
-        margin: 4px 0 6px;
-
-        padding: 5px;
-
-        display: none !important;
-
-        background: #f8faf9;
-
-        box-shadow: none;
-
-        border-radius: 10px;
-    }
-
-    .nav-item.dropdown:hover > .dropdown-menu,
-    .nav-item.dropdown:focus-within > .dropdown-menu {
         display: block !important;
     }
 
-    .dropdown-menu a {
-        white-space: normal;
-
-        padding: 10px 12px;
+    .nav-item.dropdown.active
+    .dropdown-toggle i {
+        transform: rotate(180deg);
     }
 
 }
