@@ -13069,3 +13069,146 @@ grid-template-columns:1fr;
     }
 
 }
+
+/* =====================================================
+   DROPDOWN NAVBAR - FINAL
+===================================================== */
+
+.nav-item.dropdown {
+    position: relative;
+    z-index: 10000;
+}
+
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-toggle i {
+    font-size: 9px;
+    transition: transform .2s ease;
+}
+
+.dropdown-menu {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 0;
+
+    width: 220px;
+
+    margin: 0;
+    padding: 8px;
+
+    display: none;
+
+    background: #ffffff;
+
+    border: 1px solid #dfe9e4;
+    border-radius: 12px;
+
+    box-shadow:
+        0 14px 30px rgba(21, 71, 52, .12);
+
+    z-index: 99999;
+}
+
+.nav-item.dropdown:hover > .dropdown-menu,
+.nav-item.dropdown.active > .dropdown-menu,
+.nav-item.dropdown:focus-within > .dropdown-menu {
+    display: block !important;
+}
+
+.nav-item.dropdown:hover > .dropdown-toggle i,
+.nav-item.dropdown.active > .dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu a {
+    display: block;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 10px 12px;
+
+    color: #38473f !important;
+
+    background: transparent;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    line-height: 1.4;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background: #edf7f2;
+
+    color: #087f5b !important;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .nav-item.dropdown {
+        width: 100%;
+    }
+
+    .dropdown-toggle {
+        width: 100%;
+
+        justify-content: space-between;
+
+        padding: 13px 12px;
+
+        border-bottom: 1px solid #eef2f0;
+
+        text-align: left;
+    }
+
+    .dropdown-menu {
+        position: static;
+
+        width: 100%;
+
+        margin: 4px 0 6px;
+
+        padding: 5px;
+
+        box-sizing: border-box;
+
+        background: #f8faf9;
+
+        border-radius: 10px;
+
+        box-shadow: none;
+    }
+
+    .nav-item.dropdown.active > .dropdown-menu {
+        display: block !important;
+    }
+
+    .dropdown-menu a {
+        white-space: normal;
+    }
+
+}
+
+
+/* =====================================================
+   HEADER AGAR DROPDOWN TIDAK TERPOTONG
+===================================================== */
+
+.header,
+.navbar {
+    overflow: visible !important;
+}
