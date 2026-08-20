@@ -25,6 +25,10 @@
         <loc>https://mialmuhajirinkm6.sch.id/kalender.html</loc>
     </url>
 
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/kegiatan.html</loc>
+    </url>
+
     <!-- KESISWAAN -->
     <url>
         <loc>https://mialmuhajirinkm6.sch.id/kesiswaan.html</loc>
@@ -51,12 +55,12 @@
         <loc>https://mialmuhajirinkm6.sch.id/program.html</loc>
     </url>
 
-    <!-- PROFIL - MITRA -->
+    <!-- PROFIL / MITRA -->
     <url>
         <loc>https://mialmuhajirinkm6.sch.id/mitra.html</loc>
     </url>
 
-    <!-- BERITA & GALERI -->
+    <!-- GALERI -->
     <url>
         <loc>https://mialmuhajirinkm6.sch.id/galeri.html</loc>
     </url>
