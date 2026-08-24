@@ -543,3 +543,382 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+
+/* =====================================================
+   BERITA BLOGGER OTOMATIS
+===================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const newsContainer =
+        document.getElementById("bloggerNews");
+
+    if (!newsContainer) return;
+
+
+    const feedURL =
+        "https://mialmuhajirinkm6.blogspot.com/feeds/posts/default" +
+        "?alt=json-in-script" +
+        "&max-results=6" +
+        "&callback=renderBloggerNews";
+
+
+    window.renderBloggerNews = function (data) {
+
+        const entries =
+            data.feed?.entry || [];
+
+        if (!entries.length) {
+
+            newsContainer.innerHTML = `
+                <div class="news-empty">
+                    Belum ada berita terbaru.
+                </div>
+            `;
+
+            return;
+        }
+
+
+        /* =============================================
+           BERITA PERTAMA
+        ============================================== */
+
+        const first = entries[0];
+
+        const firstTitle =
+            first.title?.$t || "Tanpa Judul";
+
+        const firstLink =
+            getBloggerLink(first);
+
+        const firstDate =
+            formatBloggerDate(
+                first.published?.$t
+            );
+
+        const firstImage =
+            getBloggerImage(first);
+
+        const firstExcerpt =
+            getBloggerExcerpt(first, 180);
+
+
+        let html = `
+
+            <article class="featured-news">
+
+                <a
+                    href="${firstLink}"
+                    class="featured-news-image"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+
+                    <img
+                        src="${firstImage}"
+                        alt="${escapeHTML(firstTitle)}"
+                        loading="lazy"
+                    >
+
+                    <span class="featured-news-category">
+                        Kegiatan Madrasah
+                    </span>
+
+                </a>
+
+
+                <div class="featured-news-content">
+
+                    <div class="news-meta">
+
+                        <span>
+                            <i class="fa-regular fa-calendar"></i>
+                            ${firstDate}
+                        </span>
+
+                        <span>
+                            <i class="fa-regular fa-newspaper"></i>
+                            Berita
+                        </span>
+
+                    </div>
+
+
+                    <h3>
+
+                        <a
+                            href="${firstLink}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            ${escapeHTML(firstTitle)}
+                        </a>
+
+                    </h3>
+
+
+                    <p>
+                        ${escapeHTML(firstExcerpt)}...
+                    </p>
+
+
+                    <a
+                        href="${firstLink}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="news-read-more"
+                    >
+                        Baca Selengkapnya
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <div class="news-small-grid">
+        `;
+
+
+        /* =============================================
+           BERITA 2 - 6
+        ============================================== */
+
+        entries.slice(1).forEach((entry) => {
+
+            const title =
+                entry.title?.$t || "Tanpa Judul";
+
+            const link =
+                getBloggerLink(entry);
+
+            const date =
+                formatBloggerDate(
+                    entry.published?.$t
+                );
+
+            const image =
+                getBloggerImage(entry);
+
+            const excerpt =
+                getBloggerExcerpt(entry, 100);
+
+
+            html += `
+
+                <article class="news-small-card">
+
+                    <a
+                        href="${link}"
+                        class="news-small-image"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <img
+                            src="${image}"
+                            alt="${escapeHTML(title)}"
+                            loading="lazy"
+                        >
+
+                    </a>
+
+
+                    <div class="news-small-content">
+
+                        <span class="news-small-date">
+
+                            <i class="fa-regular fa-calendar"></i>
+
+                            ${date}
+
+                        </span>
+
+
+                        <h3>
+
+                            <a
+                                href="${link}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                ${escapeHTML(title)}
+                            </a>
+
+                        </h3>
+
+
+                        <p>
+                            ${escapeHTML(excerpt)}...
+                        </p>
+
+                    </div>
+
+                </article>
+            `;
+        });
+
+
+        html += `</div>`;
+
+
+        newsContainer.innerHTML = html;
+
+    };
+
+
+    /* =============================================
+       LINK BLOGGER
+    ============================================== */
+
+    function getBloggerLink(entry) {
+
+        const link =
+            (entry.link || []).find(
+                item =>
+                    item.rel === "alternate"
+            );
+
+        return link
+            ? link.href
+            : "https://mialmuhajirinkm6.blogspot.com/";
+    }
+
+
+    /* =============================================
+       GAMBAR
+    ============================================== */
+
+    function getBloggerImage(entry) {
+
+        if (entry.media$thumbnail?.url) {
+
+            return entry.media$thumbnail.url
+                .replace(
+                    /\/s72-c\//,
+                    "/s600/"
+                );
+        }
+
+
+        const content =
+            entry.content?.$t ||
+            entry.summary?.$t ||
+            "";
+
+
+        const match =
+            content.match(
+                /<img[^>]+src=["']([^"']+)["']/i
+            );
+
+
+        if (match) {
+            return match[1];
+        }
+
+
+        return "aset/logonobg.png";
+    }
+
+
+    /* =============================================
+       RINGKASAN
+    ============================================== */
+
+    function getBloggerExcerpt(entry, length) {
+
+        const content =
+            entry.summary?.$t ||
+            entry.content?.$t ||
+            "";
+
+
+        return stripHTML(content)
+            .replace(/\s+/g, " ")
+            .trim()
+            .slice(0, length);
+    }
+
+
+    /* =============================================
+       FORMAT TANGGAL
+    ============================================== */
+
+    function formatBloggerDate(dateString) {
+
+        if (!dateString) {
+            return "";
+        }
+
+        const date =
+            new Date(dateString);
+
+        return date.toLocaleDateString(
+            "id-ID",
+            {
+                day: "2-digit",
+                month: "long",
+                year: "numeric"
+            }
+        );
+    }
+
+
+    /* =============================================
+       HAPUS HTML
+    ============================================== */
+
+    function stripHTML(html) {
+
+        const temp =
+            document.createElement("div");
+
+        temp.innerHTML = html;
+
+        return (
+            temp.textContent ||
+            temp.innerText ||
+            ""
+        );
+    }
+
+
+    /* =============================================
+       AMANKAN TEKS
+    ============================================== */
+
+    function escapeHTML(text) {
+
+        const temp =
+            document.createElement("div");
+
+        temp.textContent = text;
+
+        return temp.innerHTML;
+    }
+
+
+    /* =============================================
+       LOAD FEED BLOGGER
+    ============================================== */
+
+    const script =
+        document.createElement("script");
+
+    script.src = feedURL;
+
+    script.onerror = () => {
+
+        newsContainer.innerHTML = `
+            <div class="news-empty">
+                Berita belum dapat dimuat.
+            </div>
+        `;
+    };
+
+    document.body.appendChild(script);
+
+});
