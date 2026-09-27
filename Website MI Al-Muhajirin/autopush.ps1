@@ -1,11 +1,18 @@
-$repo = Get-Location
+$repoRoot = (git rev-parse --show-toplevel).Trim()
+
+if (-not $repoRoot) {
+    Write-Host "Repository Git tidak ditemukan." -ForegroundColor Red
+    exit
+}
+
+Set-Location $repoRoot
 
 Write-Host ""
 Write-Host "=========================================" -ForegroundColor Cyan
 Write-Host " AUTO PUSH GITHUB - MIS AL MUHAJIRIN" -ForegroundColor Cyan
 Write-Host "=========================================" -ForegroundColor Cyan
 Write-Host ""
-Write-Host "Folder : $repo"
+Write-Host "Repository : $repoRoot"
 Write-Host "Menunggu perubahan..."
 Write-Host ""
 
@@ -29,7 +36,7 @@ while ($true) {
             Write-Host "Perubahan terdeteksi..." -ForegroundColor Yellow
             Write-Host "Menyiapkan commit..." -ForegroundColor Yellow
 
-            git add .
+            git add -A
 
             $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
