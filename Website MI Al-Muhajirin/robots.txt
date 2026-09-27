@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mialmuhajirinkm6.sch.id/sitemap.xml
