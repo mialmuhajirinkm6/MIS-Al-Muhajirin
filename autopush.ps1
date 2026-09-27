@@ -35,40 +35,54 @@ while ($true) {
         continue
     }
 
-    # Tunggu sampai proses penyimpanan file benar-benar selesai
+    # Tunggu sampai perubahan file benar-benar selesai
     Start-Sleep -Seconds 3
 
-    $statusCheck = git status --porcelain
+    $status2 = git status --porcelain
 
-    if (-not $statusCheck) {
+    if (-not $status2) {
         $lastStatus = ""
         continue
     }
 
-    $stableStatus = ($statusCheck | Out-String).Trim()
+    $stableStatus = ($status2 | Out-String).Trim()
 
     if ($stableStatus -ne $currentStatus) {
         continue
     }
 
-    $lastStatus = $stableStatus
-
     Write-Host ""
     Write-Host "Perubahan terdeteksi:" -ForegroundColor Yellow
     git status --short
 
-    Write-Host ""
-    Write-Host "Menyiapkan commit..." -ForegroundColor Yellow
-
+    # Stage semua perubahan
     git add -A
 
-    # Pastikan memang ada perubahan yang sudah di-stage
+    # Tunggu sebentar untuk menangkap perubahan terakhir
+    Start-Sleep -Seconds 2
+
+    # Stage ulang untuk memastikan perubahan terbaru ikut
+    git add -A
+
+    # Cek apakah masih ada perubahan yang belum di-stage
+    $unstaged = git diff --name-only
+
+    if ($unstaged) {
+        Write-Host "Masih ada perubahan terbaru, menunggu..." -ForegroundColor DarkYellow
+        $lastStatus = ""
+        continue
+    }
+
+    # Cek apakah ada file yang benar-benar sudah di-stage
     $staged = git diff --cached --name-only
 
     if (-not $staged) {
-        Write-Host "Tidak ada perubahan yang siap di-commit." -ForegroundColor DarkYellow
+        $lastStatus = ""
         continue
     }
+
+    Write-Host ""
+    Write-Host "Membuat commit..." -ForegroundColor Yellow
 
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
 
@@ -76,6 +90,7 @@ while ($true) {
 
     if ($LASTEXITCODE -ne 0) {
         Write-Host "Commit gagal." -ForegroundColor Red
+        $lastStatus = ""
         continue
     }
 
@@ -93,4 +108,6 @@ while ($true) {
 
     Write-Host ""
     Write-Host "Menunggu perubahan berikutnya..."
+
+    $lastStatus = ""
 }
