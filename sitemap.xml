@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- BERANDA -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/</loc>
+    </url>
+
+    <!-- PROFIL -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/profil.html</loc>
+    </url>
+
+    <!-- AKADEMIK -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/akademik.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/kurikulum.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/kalender.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/kegiatan.html</loc>
+    </url>
+
+    <!-- KESISWAAN -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/kesiswaan.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/data-siswa.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/data-kelas.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/prestasi.html</loc>
+    </url>
+
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/kegiatan-siswa.html</loc>
+    </url>
+
+    <!-- PROGRAM -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/program.html</loc>
+    </url>
+
+    <!-- MITRA -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/mitra.html</loc>
+    </url>
+
+    <!-- GALERI -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/galeri.html</loc>
+    </url>
+
+    <!-- KONTAK -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/kontak.html</loc>
+    </url>
+
+    <!-- PPDB -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/ppdb.html</loc>
+    </url>
+
+    <!-- BERITA -->
+    <url>
+        <loc>https://mialmuhajirinkm6.sch.id/berita/berita.html</loc>
+    </url>
+
+</urlset>
